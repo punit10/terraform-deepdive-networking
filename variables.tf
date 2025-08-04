@@ -35,3 +35,9 @@ variable "environment" {
   description = "(Optional) Environment of all resources"
   default     = "development"
 }
+
+# not setting default, will set by terraform workspace at run time
+variable "billing_code" {
+  type        = string
+  description = "(Required) Billing code for the project"
+}
