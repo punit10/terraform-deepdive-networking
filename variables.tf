@@ -31,7 +31,7 @@ variable "public_subnets" {
 
 
 variable "environment" {
-  type = string
+  type        = string
   description = "(Optional) Environment of all resources"
-  default = "development"
+  default     = "development"
 }
