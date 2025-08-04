@@ -1,0 +1,25 @@
+name: Destroy Infrastructure
+
+on:
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
+
+jobs:
+  terraform-destroy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.5.0  # Use your required version
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Destroy
+        env:
+          TF_INPUT: false
+        run: terraform destroy -auto-approve
