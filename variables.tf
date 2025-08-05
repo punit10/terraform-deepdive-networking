@@ -39,9 +39,3 @@ variable "billing_code" {
   type        = string
   description = "(Required) Billing code for the project"
 }
-
-variable "workspace" {
-  type        = string
-  description = "Workspace for environment"
-  default     = locals.common_tags.environment
-}
