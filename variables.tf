@@ -39,3 +39,8 @@ variable "billing_code" {
   type        = string
   description = "(Required) Billing code for the project"
 }
+
+variable "billing_date" {
+  type        = string
+  description = "(Required) Date of billing when the support starts"
+}
